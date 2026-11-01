@@ -6,7 +6,7 @@ router.get("/", (req,res)=>{
     res.render('homePage');
 })
 
-router.post("/addMovies", async (req,res) => {
+router.post("Movies/addMovies", async (req,res) => {
     const { title,genre,description,year,rating,language,cast } = req.body;
     const data = await Movies.create(
         {
@@ -19,7 +19,7 @@ router.post("/addMovies", async (req,res) => {
             movie_cast : cast
         }
     )
-    res.render("movieList",{data})
+    res.render("addMovies",{data})
 })
 
 router.get('/movieList', async (req,res) => {
