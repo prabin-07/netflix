@@ -373,6 +373,58 @@ textarea {
     -webkit-line-clamp: 3;
 }
 
+/* Movie list page */
+.movie-list-page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.movie-list-main {
+    flex: 1;
+    width: min(1400px, 89.6%);
+    margin: 0 auto;
+    padding: 124px 0 56px;
+}
+
+.movie-list-heading {
+    margin-bottom: 28px;
+}
+
+.movie-list-heading .section-kicker {
+    margin-bottom: 8px;
+    color: #aaa;
+}
+
+.movie-list-heading h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: -0.05em;
+}
+
+.movie-list-heading > p:last-child {
+    margin: 9px 0 0;
+    color: var(--muted);
+}
+
+.movie-rating,
+.movie-cast {
+    margin-top: 7px !important;
+}
+
+.movie-info .movie-cast {
+    display: -webkit-box;
+    overflow: hidden;
+    color: #aaa;
+    line-height: 1.45;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.site-footer {
+    margin-top: auto;
+}
+
 .empty-state {
     display: grid;
     justify-items: center;
