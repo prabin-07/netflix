@@ -1,6 +1,11 @@
-// const express = require('express')
-// const app = require.express()
+const express = require('express')
+const app = require.express()
+const Movies = require('../models/movModel')
 
-// app.get("/", (req,res)=>{
-//     res.render(homePage.hbs);
-// })
+router.get("/", (req,res)=>{
+    res.render('homePage');
+})
+
+
+
+router.get('/')

@@ -614,6 +614,24 @@ textarea {
     margin-top: 26px;
 }
 
+/* Stack the add form before the two columns become too narrow to fit. */
+@media (max-width: 800px) {
+    .form-layout {
+        display: block;
+        width: min(560px, 90%);
+        min-height: calc(100vh - 84px);
+        padding: 100px 0 48px;
+    }
+
+    .form-intro {
+        margin-bottom: 28px;
+    }
+
+    .form-art {
+        display: none;
+    }
+}
+
 @media (max-width: 700px) {
     .site-header {
         height: 64px;
@@ -689,21 +707,6 @@ textarea {
         flex-direction: column;
         margin: 0 5% 45px;
         padding: 24px;
-    }
-
-    .form-layout {
-        display: block;
-        width: min(560px, 90%);
-        min-height: calc(100vh - 84px);
-        padding: 100px 0 48px;
-    }
-
-    .form-intro {
-        margin-bottom: 28px;
-    }
-
-    .form-art {
-        display: none;
     }
 
     .form-card {
