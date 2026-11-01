@@ -2,8 +2,13 @@ const express = require('express');
 const router = express.Router();
 const Movies = require('../models/movModel');
 
-router.get("/", (req,res)=>{
-    res.redirect('/Movies');
+router.get("/", async (req,res)=>{
+    const movies = await Movies.find();
+    res.render('homePage',{movies});
+})
+
+router.get("/addMovies", (req,res)=>{
+    res.render('addMovies');
 })
 
 router.post("/addMovies", async (req,res) => {
@@ -19,7 +24,7 @@ router.post("/addMovies", async (req,res) => {
             movie_cast : cast
         }
     )
-    res.redirect('/Movies/movieList')
+    res.render("movieAdded",{data})
 })
 
 router.get('/movieList', async (req,res) => {
