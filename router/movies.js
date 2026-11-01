@@ -6,8 +6,8 @@ router.get("/", (req,res)=>{
     res.render('homePage');
 })
 
-router.post("/addMovies", async (req,res) => {
-    const { title,genre,description,year,rating,episodes,language,cast } = req.body;
+router.post("/Movies/addMovies", async (req,res) => {
+    const { title,genre,description,year,rating,language,cast } = req.body;
     const data = await Movies.create(
         {
             movie_title : title,
