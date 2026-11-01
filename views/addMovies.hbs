@@ -29,16 +29,12 @@
             <form action="/Movies/addMovies" method="post">
                 <div class="field-group">
                     <label for="movie_title">Movie title <span>*</span></label>
-                    <input id="movie_title" name="movie_title" type="text" placeholder="e.g. The Grand Budapest Hotel" required maxlength="150" autocomplete="off">
+                    <input id="movie_title" name="title" type="text" placeholder="e.g. The Grand Budapest Hotel" required maxlength="150" autocomplete="off">
                 </div>
                 <div class="field-row">
                     <div class="field-group">
                         <label for="movie_genre">Genre</label>
-                        <input id="movie_genre" name="movie_genre" type="text" placeholder="e.g. Drama" maxlength="80">
-                    </div>
-                    <div class="field-group">
-                        <label for="release_year">Release date</label>
-                        <input id="release_year" name="release_year" type="date">
+                        <input id="movie_genre" name="genre" type="text" placeholder="e.g. Drama" maxlength="80">
                     </div>
                 </div>
                 <div class="field-group">
@@ -50,15 +46,11 @@
                         <label for="rating">Rating</label>
                         <input id="rating" name="rating" type="number" step="any" placeholder="e.g. 8.5" inputmode="decimal">
                     </div>
-                    <div class="field-group">
-                        <label for="episodes">Episodes</label>
-                        <input id="episodes" name="episodes" type="number" min="0" step="1" placeholder="e.g. 10" inputmode="numeric">
-                    </div>
                 </div>
                 <div class="field-row">
                     <div class="field-group">
                         <label for="language">Language</label>
-                        <input id="language" name="language" type="text" placeholder="e.g. English" maxlength="80">
+                        <input id="language" name="language" type="text" placeholder="e.g. English" maxlength="80" min="0" max="10">
                     </div>
                     <div class="field-group">
                         <label for="cast">Cast</label>
