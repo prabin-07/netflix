@@ -1,5 +1,5 @@
 const express = require('express');
-const router = require.express();
+const router = express.Router();
 const Movies = require('../models/movModel');
 
 router.get("/", (req,res)=>{
