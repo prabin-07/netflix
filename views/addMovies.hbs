@@ -14,7 +14,7 @@
             <a href="/Movies">Home</a>
             <a href="/Movies/addMovies">Movies</a>
         </nav>
-        <a class="header-action" href="/">Back to home <span aria-hidden="true">→</span></a>
+        <a class="header-action" href="/Movies">Back to home <span aria-hidden="true">→</span></a>
     </header>
     <main class="form-layout">
         <div class="form-intro">
@@ -36,16 +36,14 @@
                         <label for="movie_genre">Genre</label>
                         <input id="movie_genre" name="genre" type="text" placeholder="e.g. Drama" maxlength="80">
                     </div>
+                    <div class="field-group">
+                        <label for="movie_year">Release year</label>
+                        <input id="movie_year" name="year" type="number" min="1888" max="2100" inputmode="numeric" placeholder="e.g. 2024">
+                    </div>
                 </div>
                 <div class="field-group">
                     <label for="description">Description</label>
                     <textarea id="description" name="description" rows="4" placeholder="What makes this movie worth watching?" maxlength="1000"></textarea>
-                </div>
-                <div class="field-row">
-                    <div class="field-group">
-                        <label for="movie_year">Release Year</label>
-                        <input type="text" name="year">
-                    </div>
                 </div>
                 <div class="field-row">
                     <div class="field-group">
