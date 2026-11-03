@@ -7,7 +7,8 @@ app.set("view engine", "hbs")
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
 
-app.use("/Movies",require('./router/movies'))
+app.use("/", movieRouter)
+app.use("/Movies", movieRouter)
 
 
 mongoose.connect("mongodb://localhost:27017/Movies").then(()=> 
@@ -16,5 +17,5 @@ mongoose.connect("mongodb://localhost:27017/Movies").then(()=>
 
 
 app.listen(3000, ()=> {
-    console.log('listening. http://localhost:3000/movies')
+    console.log('listening. http://localhost:3000/')
 })

@@ -24,12 +24,17 @@ router.post("/addMovies", async (req,res) => {
             movie_cast : cast
         }
     )
-    res.render("movieAdded",{data})
+    res.render("movieList",{data})
 })
 
 router.get('/movieList', async (req,res) => {
     const value = await Movies.find();
     res.render('movieList',{value})
+})
+
+router.get('/:id', async (req,res) => {
+    const mov = await Movies.findById(req.params.id)
+    res.render('movieList',{mov})
 })
 
 module.exports=router;
