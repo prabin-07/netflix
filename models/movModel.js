@@ -7,7 +7,8 @@ const movieSchema = mongoose.Schema(
         release_year : Date,
         movie_rating : Number,
         movie_language : String,
-        movie_cast : String
+        movie_cast : String,
+        movie_poster : String
     }
 )
 

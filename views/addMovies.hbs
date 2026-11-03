@@ -27,7 +27,7 @@
         <section class="form-card" aria-labelledby="form-title">
             <h2 id="form-title">Movie details</h2>
             <p class="form-note">Fields marked with <span>*</span> are required.</p>
-            <form action="/Movies/addMovies" method="post">
+            <form action="/Movies/addMovies" method="post" enctype="multipart/form-data">
                 <div class="field-group">
                     <label for="movie_title">Movie title <span>*</span></label>
                     <input id="movie_title" name="title" type="text" placeholder="e.g. The Grand Budapest Hotel" required maxlength="150" autocomplete="off">
@@ -60,6 +60,10 @@
                     <div class="field-group">
                         <label for="cast">Cast</label>
                         <input id="cast" name="cast" type="text" placeholder="e.g. Actor One, Actor Two" maxlength="500">
+                    </div>
+                    <div>
+                        <label for="movie-poster">Upload Image</label>
+                        <input type="file" name="moviePost">
                     </div>
                 </div>
                 <div class="form-actions">

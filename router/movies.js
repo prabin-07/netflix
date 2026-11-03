@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const Movies = require('../models/movModel');
+const multer = require('multer')
+
+const files = multer({dest:'uploads/'})
 
 router.get("/", async (req,res)=>{
     const movies = await Movies.find();
@@ -11,8 +14,8 @@ router.get("/addMovies", (req,res)=>{
     res.render('addMovies');
 })
 
-router.post("/addMovies", async (req,res) => {
-    const { title,genre,description,year,rating,language,cast } = req.body;
+router.post("/addMovies",files.single('moviePost') ,async (req,res) => {
+    const { title,genre,description,year,rating,language,cast,moviePost } = req.body;
     const data = await Movies.create(
         {
             movie_title : title,
@@ -21,7 +24,8 @@ router.post("/addMovies", async (req,res) => {
             release_year : year,
             movie_rating : rating,
             movie_language : language,
-            movie_cast : cast
+            movie_cast : cast,
+            movie_poster : moviePost
         }
     )
     res.render("movieList",{data})
